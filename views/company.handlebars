@@ -1,0 +1,166 @@
+
+<div class="wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="card col-4" id="overview">
+				<div class="card-header">
+					Company Overview
+				</div>
+				<div class="card-body">
+					<img src="{{company.image}}"><br>
+					Ticker: <span id="ticker">{{company.symbol}}</span>
+					<br>
+					Name: <span id="companyName">{{company.companyName}}</span><br>
+					Industry: {{company.industry}}<br>
+					Sector: {{company.sector}}<br>
+					CEO: {{company.ceo}}<br>
+				</div>
+			</div> 
+			<br>
+			<div class="card col-12" id="metrics" style="margin-top: 20px;">
+				<div class="card-header">
+					Summary Financials
+				</div>
+				<br>
+				<div class="card-body metrics-fin-stats">
+					<table class="table">
+						<thead class="thead-dark">
+							<tr class="statement_year">
+								<th class="companyName"></th>
+								<th>2015</th>
+								<th>2016</th>
+								<th>2017</th>
+								<th>2018</th>
+								<th>2019</th>
+							</tr>
+						</thead>
+						<tbody class="statement_body">
+							<tr class="table_revenue">
+								<td>Revenue</td>
+							</tr>
+							<tr class="table_revenueGrowth">
+								<td>Revenue Growth</td>
+							</tr>
+							<tr class="table_COGS">
+								{{!-- COGS is same as cost of revenue --}}
+								<td>COGS</td>
+							</tr>
+							<tr class="table_GP">
+								<th>Gross Profit</th>
+							</tr>
+							<tr class="table_opEx">
+								<td>Operating Expenses</td>
+							</tr>
+							<tr class="table_opInc">
+								<th>Operating Income</th>
+							</tr>
+							<tr class="table_grossMargin">
+								<td>Gross Margin</td>
+							</tr>
+							<tr class="table_intEx">
+								<td>Interest Expense</td>
+							</tr>
+							<tr class="table_EBT">
+								<th>Earnings before Tax</th>
+							</tr>
+							<tr class="table_ITE">
+								<td>Income Tax Expense</td>
+							</tr>
+							<tr class="table_NI">
+								<th>Net Income</th>
+							</tr>
+							<tr class="table_PM">
+								<td>Profit Margin</td>
+							</tr>
+							<tr class="table_EBITDA">
+								<th>EBITDA</th>
+							</tr>
+							<tr class="table_EBITDAM">
+								<th>EBITDA Margin</th>
+							</tr>
+						</tbody>
+					</table>
+					Balance Sheet & KEY RATIO
+					<table class="table">
+						<thead class="thead-dark">
+							<tr>
+								<th></th>
+								<th>2015</th>
+								<th>2016</th>
+								<th>2017</th>
+								<th>2018</th>
+								<th>2019</th>
+							</tr>
+						</thead>
+						<tbody class="bskr_body">
+							<tr class="table_WC">
+								<td>Working Capital</td>
+							</tr>
+							<tr class="table_DSO">
+								<td>Days Sales Outstanding</td>
+							</tr>
+							<tr class="table_DPO">
+								<td>Days Payables Outstanding</td>
+							</tr>
+							<tr class="table_DIH">
+								<td>Days of Inventory on Hand</td>
+							</tr>
+							<tr class="table_RT">
+								<td>Receivables Turnover</td>
+							</tr>
+							<tr class="table_PT">
+								<td>Payables Turnover</td>
+							</tr>
+							<tr class="table_IT">
+								<td>Inventory Turnover</td>
+							</tr>
+							<tr class="table_NDEBITDA">
+								<td>Net Debt to EBITDA</td>
+							</tr>
+							<tr class="table_CR">
+								<td>Current ratio</td>
+							</tr>
+							<tr class="table_IC">
+								<td>Interest Coverage</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div> 
+
+		<br>
+		<hr>
+		<br>
+
+		<div class="row">
+			<div class="card col-5" id="news">
+				<div class="card-header">
+					<span id="test">Latest News of {{company.companyName}}</span>
+				</div>
+				<hr>
+				<div class="card-body">
+					<h3 class="news_title"></h3>
+					<p class="news_source"></p>
+					<p class="news_date"></p>
+					<p class="news_summary"></p>
+				</div>
+			</div> 
+		</div> 
+
+		<br>
+		<br>
+
+		<footer class="text-center">
+			<hr>
+			<br>
+			Copyright: Dolla Billas LLC
+			<br>
+			<br>
+		</footer>
+
+	</div>
+</div>
+{{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
+<script src="/js/companies.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>

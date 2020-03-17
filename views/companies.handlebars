@@ -1,0 +1,30 @@
+<h3 style="margin-left:30px">Most Active Stock Companies</h3>
+{{#each company}}
+<ul style="margin-top:20px;">
+    <div class="card" style="width: 90%;">
+        <div class="card-header">
+            {{this.companyName}}
+        </div>
+        <div class="row no-gutters">
+            <div class="col-md-2">
+                <br>
+                <img src="{{this.image}}" alt="...">
+            </div>
+            <div class="col-md-7">
+                <h4 class="card-title">{{this.symbol}}</p>
+                    <p class="card-text">Last Price: ${{this.price}}</p>
+                    <p class="card-text">Changes: ${{this.changes}}</p>
+                    <p class="card-text">Market Cap: {{this.mktCap}}</p>
+            </div>
+            <div class="col-md-3">
+                <br><br><br>
+                <form action="/company/{{this.symbol}}" method="GET">
+                    <button class="btn btn-primary">Click to see detail</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</ul>
+{{/each}}
+<script src="js/lists.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
